@@ -16,14 +16,14 @@
                                 <th>Description</th>
                             </tr>
                         </thead>
-                        <tbody *ngFor="let currentDivision of divisions; let i = index">
+                        <tbody *ngFor="let currentDivision of division; let i = index">
                             <tr>
                                 <td>{{ currentDivision._id }}</td>
                                 <td>{{ currentDivision.name }}</td>
                                 <td>{{ currentDivision.description }}</td>
                                 <td>
                                     <button routerLink="/edit-data-divisi/{{ currentDivision._id }}"> Edit </button>
-                                    <button class="r" onclick="return confirm('yakin akan menghapus data?')">Hapus</button>
+                                    <button (click)="(currentDivision._id)"></button>
                                 </td>
                             </tr>
                         </tbody>

@@ -3,9 +3,10 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-tittle"> Tambah Data</h3>
+                    <h3 class="card-tittle"> Edit </h3>
                 </div>
-                <form method="POST" action="/divisi">
+                <form method="POST" action="/edit-data-divisi">
+                @method('put')
                 @csrf
                 <div class="card-body">
                     <table class="table table-head-fixed text-nowrap">
@@ -21,10 +22,7 @@
                                 <td>{{ currentDivision._id }}</td>
                                 <td>{{ currentDivision.name }}</td>
                                 <td>{{ currentDivision.description }}</td>
-                                <td>
-                                    <button routerLink="/edit-data-divisi/{{ currentDivision._id }}"> Edit </button>
-                                    <button class="r" onclick="return confirm('yakin akan menghapus data?')">Hapus</button>
-                                </td>
+
                             </tr>
                         </tbody>
                     </table>
