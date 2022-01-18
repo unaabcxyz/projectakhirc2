@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { DivisionService } from '../services/division.service';
 
 @Component({
   selector: 'app-edit-data-divisi',
@@ -9,11 +7,7 @@ import { DivisionService } from '../services/division.service';
 })
 export class EditDataDivisiComponent implements OnInit {
 
-  constructor(
-    private rest: DivisionService,
-    private activatedRoute : ActivatedRoute,
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
